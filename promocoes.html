@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Casa Das Mangueiras</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .price {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: red; /* Cor para o preço riscado */
+            margin-right: 10px;
+        }
+
+        .new-price {
+            color: green; /* Cor para o preço promocional */
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Casa Das Mangueiras</h1>
+        <body>
+            <header>
+                
+                <span class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('active')">☰</span>
+                <nav>
+                    <ul>
+                        <li><a href="Site.html">Início</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="promocoes.html">Promoções</a></li> <!-- Link atualizado -->
+                        <li><a href="contato.html">Sobre Nós</a></li>
+                    </ul>
+                </nav>
+    </header>
+
+
+    <!-- Sessão de Produtos -->
+    <section class="catalog-section">
+        <h2>Aproveite as promoções!</h2>
+
+        <div class="product-grid">
+            <!-- Produto 1 -->
+            <div class="product-card">
+                <div class="product-image" style="background-image: url('mangueiradealtapressao.jpg');"></div>
+                <div class="product-content">
+                    <h3>Mangueira de Alta pressao</h3>
+                    <p>Versátil e resistente, ideal para uso doméstico e pequenos serviços.</p>
+                    <!-- Preço com desconto -->
+                    <p class="price">
+                        <span class="old-price">R$ 59,90</span> 
+                        <span class="new-price">R$ 39,90</span>
+                    </p>
+                    <a href="#" class="btn">Comprar</a>
+                </div>
+            </div>
+
+            <!-- Produto 2 -->
+            <div class="product-card">
+                <div class="product-image" style="background-image: url('mangueira\ tubocristal.jpg');"></div>
+                <div class="product-content">
+                    <h3>Mangueira tubo de cristal</h3>
+                    <p>Ideal para lavar automóveis, suporta alta pressão com excelente durabilidade.</p>
+                    <!-- Preço com desconto -->
+                    <p class="price">
+                        <span class="old-price">R$ 79,90</span>
+                        <span class="new-price">R$ 59,90</span>
+                    </p>
+                    <a href="#" class="btn">Comprar</a>
+                </div>
+            </div>
+
+            <!-- Produto 3 -->
+            <div class="product-card">
+                <div class="product-image" style="background-image: url('mangueiradegas.jpg');"></div>
+                <div class="product-content">
+                    <h3>Mangueira de GAS</h3>
+                    <p>Transparente e durável, ideal para monitoramento de líquidos em sistemas hidráulicos.</p>
+                    <!-- Preço com desconto -->
+                    <p class="price">
+                        <span class="old-price">R$ 69,90</span>
+                        <span class="new-price">R$ 49,90</span>
+                    </p>
+                    <a href="#" class="btn">Comprar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Botão WhatsApp -->
+    <a href="https://api.whatsapp.com/send?phone=557536234439" class="whatsapp-button">
+        <img src="whatsapp-icon.jpg" alt="WhatsApp">
+    </a>
+
+ 
+</body>
+</html>

@@ -1,0 +1,416 @@
+/* Reset e configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #ffcc00; /* Amarelo */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #000;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 10px 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #000;
+    font-size: 1.2em;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* Responsividade do menu */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+    .menu-toggle {
+        display: block;
+        font-size: 2em;
+        cursor: pointer;
+    }
+    nav ul.active {
+        display: block;
+        text-align: center;
+    }
+}
+
+/* Estilo do banner */
+.banner {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    background-color: #ffcc00;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: #ffcc00;
+}
+
+/* Estilo da seção de busca */
+.search-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.search-section input[type="text"] {
+    width: 60%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.1em;
+}
+
+.search-section button {
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Estilo do catálogo */
+.catalog-section {
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.catalog-section h2 {
+    text-align: center;
+    font-size: 2.2em;
+    color: #ff0000;
+    margin-bottom: 40px;
+}
+
+.catalog-section .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Adicione o tamanho fixo nos cards para evitar mudanças no tamanho */
+.catalog-section .product-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    height: 400px; /* Defina uma altura fixa para os cards */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo da imagem do produto */
+.catalog-section .product-image {
+    background-color: #ddd;
+    height: 200px;
+    background: url('https://via.placeholder.com/600x400') no-repeat center center/cover;
+}
+
+/* Estilo do conteúdo do produto */
+.catalog-section .product-content {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.catalog-section .product-content h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.catalog-section .product-content p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.catalog-section .product-content .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.catalog-section .product-content .btn:hover {
+    background-color: #cc0000;
+}
+
+/* Estilo da seção de contato */
+.contact-section {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2em;
+    color: #ffcc00;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-section a {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Botão do WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsapp-button img {
+    width: 35px;
+    height: 35px;
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    padding: 10px;
+    background-color: #f9f9f9;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.breadcrumb a {
+    color: #ff0000;
+    margin-right: 5px;
+}
+
+.breadcrumb a:after {
+    content: ">";
+    margin-left: 5px;
+}
+
+.breadcrumb a:last-child:after {
+    content: "";
+}
+
+/* Efeitos em botões */
+button {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #cc0000;
+    transform: scale(1.05);
+}
+
+/* Estilo adicional para os itens da grid */
+.product-grid {
+    display: flex;
+    flex-wrap: nowrap; /* Impede que os itens quebrem para a próxima linha */
+    gap: 20px; /* Espaçamento entre os produtos */
+    overflow-x: auto; /* Adiciona uma barra de rolagem horizontal, se necessário */
+}
+
+.price {
+    font-size: 1.2em;
+    color: #28a745;
+    font-weight: bold;
+    margin-top: 5px;
+}
+.sobre-nos-section {
+    background-color: #f1f5f8; /* Fundo suave */
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 30px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sobre-nos-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sobre-nos-section p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.sobre-nos-section .team {
+    margin: 20px 0;
+}
+
+.sobre-nos-section .team h3,
+.sobre-nos-section .project-details h3 {
+    font-size: 1.8rem;
+    color: #444;
+    margin-bottom: 15px;
+    text-decoration: underline;
+}
+
+.sobre-nos-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sobre-nos-section ul li {
+    font-size: 1.1rem;
+    color: #666;
+    margin: 10px 0;
+}
+
+.sobre-nos-section ul li strong {
+    color: #333;
+}
+
+.sobre-nos-section .project-details {
+    margin: 30px 0;
+}
+
+.sobre-nos-section .project-details p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.sobre-nos-section strong {
+    color: #007BFF;
+}
+
+/* Animação de entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px); /* Começa um pouco abaixo */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Chega na posição original */
+    }
+}
+
+.contact-section {
+    animation: fadeInUp 1s ease-out forwards; /* 'forwards' mantém o estado final da animação */
+    opacity: 0; /* Começa invisível */
+    transform: translateY(30px); /* Começa abaixo */
+}
+/* Animação de entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px); /* Começa um pouco abaixo */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Chega na posição original */
+    }
+}
+
+/* Animação aplicada aos cards de produtos */
+.product-card {
+    animation: fadeInUp 0.5s ease-out forwards;
+    opacity: 0; /* Começa invisível */
+    transform: translateY(30px); /* Começa abaixo */
+}
+
+.product-card:nth-child(even) {
+    animation-delay: 0.3s; /* Adiciona atraso para a animação de elementos pares */
+}
+
+.product-card:nth-child(odd) {
+    animation-delay: 0.6s; /* Adiciona atraso para a animação de elementos ímpares */
+}

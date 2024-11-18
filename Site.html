@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa Das Mangueiras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Casa Das Mangueiras</h1>
+        <span class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('active')">☰</span>
+        <nav>
+            <ul>
+                <li><a href="Site.html">Início</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="promocoes.html">Promoções</a></li> <!-- Link atualizado -->
+                <li><a href="contato.html">Sobre Nós</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <img src="banner 2.JPG" alt="Casa das Mangueiras">
+    </div>
+
+    <section class="search-section">
+        <h2>Encontre a Mangueira Ideal Para o Seu Negócio</h2>
+        <input type="text" id="searchInput" placeholder="O que você procura?" onkeyup="searchProduct()">
+        <button>Pesquisar</button>
+    </section>
+
+    <nav class="breadcrumb">
+        <a href="#">Início</a>
+        <a href="#">Produtos</a>
+        <span>Mangueira Flexível</span>
+    </nav>
+
+    <section class="catalog-section">
+        <h2>Nossas Mangueiras</h2>
+        <div class="product-grid" id="productGrid">
+            <!-- Produtos vão ser preenchidos aqui via JavaScript -->
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <h2>Entre em Contato Conosco</h2>
+        <p>Estamos prontos para ajudar com qualquer dúvida sobre nossos produtos.</p>
+        <a href="tel:+557536234439">Ligue para: (75) 3623-4439</a>
+        <div class="contact-form">
+            <form>
+                <input type="text" placeholder="Nome Completo">
+                <input type="email" placeholder="Seu Email">
+                <textarea placeholder="Sua Mensagem"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <a href="https://api.whatsapp.com/send?phone=557536234439" class="whatsapp-button">
+        <img src="whatsapp-icon.jpg" alt="WhatsApp">
+    </a>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
